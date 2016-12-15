@@ -14,6 +14,8 @@ from quiner import *
 
 import inspect, re
 
+#small change for testing purposes
+
 ##thanks stack http://stackoverflow.com/questions/592746/how-can-you-print-a-variable-name-in-python
 def varname(p):
   for line in inspect.getframeinfo(inspect.currentframe().f_back)[3]:
