@@ -19,7 +19,7 @@ hf['H2']  = 0
 hf['N2']  = 0
 hf['O2']  = 0
 
-fuel = 'C8H18'
+fuel = 'C2H6'
 
 #Octane Combustion
 reac, prod = balance_stoichiometry({fuel, 'O2'}, {'H2O','CO2'})
@@ -57,7 +57,7 @@ for k in prod.keys(): h_init[k] = pr('Hmolar','T',Ti,'P',pi,k)
 
 # Now, run a series of 10K trials to find closest value of T where the total enthalpy change matches that of the energy released from octane
 
-Ts = linspace(Ti,3000,10000)
+Ts = linspace(Ti,6000,20000)
 best = 1e13 #best different is something huge
 T_best = Ti #assume initial T_best is 298
 
