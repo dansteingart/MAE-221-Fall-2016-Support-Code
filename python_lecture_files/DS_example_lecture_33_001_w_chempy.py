@@ -19,7 +19,7 @@ hf['H2']  = 0
 hf['N2']  = 0
 hf['O2']  = 0
 
-fuel = 'C2H6'
+fuel = 'C8H18'
 
 #Octane Combustion
 reac, prod = balance_stoichiometry({fuel, 'O2'}, {'H2O','CO2'})
