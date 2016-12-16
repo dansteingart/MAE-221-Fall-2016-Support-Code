@@ -1,6 +1,6 @@
 ##Author: Dan Steingart
 ##Date Started: 2016-12-13
-##Notes: MS Example 14.1
+##Notes: MS Example 14.2
 
 from pithy import *
 
