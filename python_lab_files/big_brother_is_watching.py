@@ -56,7 +56,7 @@ for core in dist:
             plot(df['date'],df[reading],label=reading)
         title(core)
         legend(loc="best")
-        ylabel('analog value A0')
+        ylabel('analog value on 12 bits')
         
         #Bound the time to last 10 hours
         d1 = datetime.datetime.fromtimestamp(time.time()-3600*10)
@@ -72,7 +72,6 @@ for core in dist:
         showme()
         clf()
     except Exception as E:
-        print E
         print "Likely no data for ",core,"in the last 10 hours"
         
 client.close()
