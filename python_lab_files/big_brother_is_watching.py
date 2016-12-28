@@ -26,13 +26,17 @@ print
 # dist.append('2f002a000247343339373536')
 
 #For each Photon
+
+#hours to check
+hr = 2
+
 for core in dist:
     
     try:
         #Get only the data reference for that photon for the last 10 hours
         c = client.mae221.lab5_1.find(
             {'coreid':core,
-             'time':{'$gt':time.time()-3600*10}
+             'time':{'$gt':time.time()-3600*hr}
             }).sort('time',-1)
         
         #Print the time of last reading
@@ -59,7 +63,7 @@ for core in dist:
         ylabel('analog value on 12 bits')
         
         #Bound the time to last 10 hours
-        d1 = datetime.datetime.fromtimestamp(time.time()-3600*10)
+        d1 = datetime.datetime.fromtimestamp(time.time()-3600*hr)
         d2 = datetime.datetime.fromtimestamp(time.time())
         xlim([d1,d2])
     
@@ -72,6 +76,6 @@ for core in dist:
         showme()
         clf()
     except Exception as E:
-        print "Likely no data for ",core,"in the last 10 hours"
+        print "Likely no data for",core,"in the last",hr," hours"
         
 client.close()
