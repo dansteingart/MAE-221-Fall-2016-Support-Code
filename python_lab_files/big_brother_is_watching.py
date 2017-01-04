@@ -5,8 +5,7 @@ from pithy import *
 from datetime import datetime as dt
 
 #Log into database
-client = mc("pithy.princeton.edu")
-print client.admin.authenticate('lab', 'is_super', mechanism='SCRAM-SHA-1')
+client = mc("radical-edward.princeton.edu",47017)
 
 
 #Find All Distinct Core DS
