@@ -1,7 +1,7 @@
 ##Author: Dan Steingart
 ##Date Started: 2016-12-12
 ##Notes: Solution to Midterm 3, based on example 13.8
-
+##add back
 from chempy import balance_stoichiometry
 from pithy import *
 
